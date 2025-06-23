@@ -3,7 +3,7 @@ An extension for [pass](https://www.passwordstore.org/) that allows fuzzy
 finding in the store ( `$PASSWORD_STORE_DIR` ).
 
 > [!TIP]
-> requires `fzf` to be installed in the system.
+> requires [`fzf`](https://github.com/junegunn/fzf) to be installed in the system ( [how to install fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#installation) ).
 
 # Installation
 
@@ -26,25 +26,31 @@ $ pass fzf
 
 # Usage
 
+![pass fzf --help](./screenshots/pass-fzf-help.png)
+
 ```bash
 $ pass fzf --help
-USAGE: pass fzf [options] [query]
 
-OPTIONS:
-  -s           Only output selected path (don't run 'pass')
-  -h, --help   Show this help message
+USAGE
+  $ pass fzf [OPTIONS] [SUB_COMMAND] [QUERY]
 
-EXAMPLES:
-  pass fzf                  → pass show <selected>
-  pass fzf show             → pass show <selected>
-  pass fzf github           → fzf search with 'github', then pass show <selected>
-  pass fzf -c               → pass -c <selected>
-  pass fzf edit             → pass edit <selected>
-  pass fzf -s               → just print path
-  pass fzf -s github        → just print path (query='github')
+OPTIONS
+  -s           only output selected path without run 'pass'
+  -h, --help   show this help message
+
+EXAMPLES
+  $ pass fzf                  → pass -c <selected>
+  $ pass fzf show             → pass show <selected>
+  $ pass fzf github           → fzf search with 'github', then pass -c <selected>
+  $ pass fzf -c               → pass -c <selected>
+  $ pass fzf edit             → pass edit <selected>
+  $ pass fzf -s               → just print path
+  $ pass fzf -s github        → just print path (query='github')
 
 NOTE:
-  • supported pass sub-commands : -c/--clip,show,edit,rm
+  • supported pass sub-commands : -c/--clip, show, edit, rm
+  • if no sub-command is given, the default is -c/--clip (clipboard)
+  • environment variables that can be set PASSWORD_STORE_DIR, PASSWORD_STORE_CLIP_TIM
 ```
 
 # Alias
