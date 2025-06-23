@@ -26,7 +26,7 @@ $ pass fzf
 
 # Usage
 
-![pass fzf --help](./screenshots/pass-fzf-help.png)
+![pass fzf --help](./screenshots/pass-fzf--help.png)
 
 ```bash
 $ pass fzf --help
@@ -57,3 +57,11 @@ NOTE:
 ```bash
 $ alias passs='PASSWORD_STORE_ENABLE_EXTENSIONS=true pass fzf'
 ```
+
+# Acknowledgements
+
+- [bash-colors](https://github.com/ppo/bash-colors) by [@ppo](https://github.com/ppo) – used for colorized terminal output.
+
+# License
+
+This project is based on [ficoos/pass-fzf](https://github.com/ficoos/pass-fzf), originally created by Saggi Mizrahi, and is licensed under the MIT License.
